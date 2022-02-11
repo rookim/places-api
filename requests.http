@@ -1,0 +1,27 @@
+@domain = http://localhost:3000/
+
+### Places Index
+GET http://localhost:3000/places
+
+### Places Create
+POST {{ domain }}/places
+Content-Type: application/json
+
+{
+  "name": "Hollywood Sign",
+  "address": "Los Angeles, CA"
+}
+
+### Places Show
+GET {{ domain }}/places/4
+
+### Places Update
+PATCH {{ domain }}/places/4
+Content-Type: application/json
+
+{
+  "name": "Disneyland Park"
+}
+
+### Places Destroy
+DELETE {{ domain }}/places/5
